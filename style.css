@@ -17,9 +17,9 @@
     }
 
     .image{
-        border: 0px solid white;
-        height: 100px;
-        width: 100px;
+        border: 0px solid black;
+        height: 300px; /*100*100*/
+        width: 300px;
         border-radius: 100px;
         margin: auto;
         background: url('profile.jpg')no-repeat center top/cover;
