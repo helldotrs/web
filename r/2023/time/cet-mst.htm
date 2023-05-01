@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Current Time in MST and CET</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: monospace;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.4em;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+    span {
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Current Time in MST and CET</h1>
+  <p><span>$</span> date</p>
+  <p><span>CET:</span> <span id="cet-time"></span></p>
+  <p><span>MST:</span> <span id="mst-time"></span></p>
+
+  <script>
+    // get the current date and time
+    const now = new Date();
+
+    // set the timezones for MST and CET
+    const mstTimezone = "MST";
+    const cetTimezone = "CET";
+
+    // create date objects for MST and CET using the current date and time
+    const mstDate = new Date(now.toLocaleString("en-US", { timeZone: mstTimezone }));
+    const cetDate = new Date(now.toLocaleString("en-US", { timeZone: cetTimezone }));
+
+    // format the time for MST and CET
+    const mstTime24 = mstDate.toLocaleString("en-US", { hour: "numeric", minute: "numeric", hour12: false });
+    const cetTime24 = cetDate.toLocaleString("en-US", { hour: "numeric", minute: "numeric", hour12: false });
+    const mstTime12 = mstDate.toLocaleString("en-US", { hour: "numeric", minute: "numeric", hour12: true });
+    const cetTime12 = cetDate.toLocaleString("en-US", { hour: "numeric", minute: "numeric", hour12: true });
+
+    // format the date for MST and CET
+    const mstDateFormatted = mstDate.toLocaleString("en-US", { day: "numeric", month: "short" });
+    const cetDateFormatted = cetDate.toLocaleString("en-US", { day: "numeric", month: "short" });
+
+    // display the times for MST and CET
+    document.getElementById("cet-time").textContent = `${cetTime24} / ${cetTime12}, ${cetDateFormatted}`;
+    document.getElementById("mst-time").textContent = `${mstTime24} / ${mstTime12}, ${mstDateFormatted}`;
+  </script>
+</body>
+</html>
