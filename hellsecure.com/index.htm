@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HellSecure</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+        }
+
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #imageContainer {
+            margin-bottom: 20px;
+        }
+
+        .red-half {
+            color: red;
+            opacity: 0.9;
+            /* Set opacity to around 90% */
+            transition: opacity 3s ease-in-out;
+            /* Slower and smoother transition */
+        }
+
+        .white-half {
+            color: white;
+            opacity: 0.9;
+            /* Set opacity to around 90% */
+            transition: opacity 3s ease-in-out;
+            /* Slower and smoother transition */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="centered-container">
+        <!--div id="imageContainer">
+            <img src="hslogo.jpg" alt="HellSecure Logo">
+        </div-->
+        <div id="textContainer">
+            <span class="red-half">Hell</span>
+            <span class="white-half">Secure</span>
+        </div>
+    </div>
+    <script>
+        function fadeInOut() {
+      const redHalf = document.querySelector('.red-half');
+      const whiteHalf = document.querySelector('.white-half');
+      
+      // Fade in
+      redHalf.style.opacity = '0.9';
+      whiteHalf.style.opacity = '0.9';
+
+      // Delay for the fade-in
+      setTimeout(() => {
+        // Fade out
+        redHalf.style.opacity = '0';
+        whiteHalf.style.opacity = '0';
+        
+        // Delay for the fade-out
+        setTimeout(fadeInOut, 3000); // Repeat after 3 seconds
+      }, 3000); // 3 seconds
+    }
+
+    // Start the animation loop
+    fadeInOut();
+    </script>
+</body>
+
+</html>
