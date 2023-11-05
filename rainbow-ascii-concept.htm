@@ -4,42 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainbow Lines</title>
+    <title>Colored Lines</title>
     <style>
         .line {
             height: 20px;
             width: 100%;
             margin: 5px 0;
+            text-align: center;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: bold;
         }
 
-        .line:nth-child(1) {
-            background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-        }
-
-        .line:nth-child(2) {
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-        }
-
-        .line:nth-child(3) {
-            background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-        }
-
-        .line:nth-child(4) {
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-        }
-
-        .line:nth-child(5) {
-            background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-        }
+        .red { color: red; }
+        .orange { color: orange; }
+        .yellow { color: yellow; }
+        .green { color: green; }
+        .blue { color: blue; }
     </style>
 </head>
 
 <body>
-    <div class="line">12</div>
-    <div class="line">34</div>
-    <div class="line">56</div>
-    <div class="line">78</div>
-    <div class="line">90</div>
+    <div class="line red">Red Line</div>
+    <div class="line orange">Orange Line</div>
+    <div class="line yellow">Yellow Line</div>
+    <div class="line green">Green Line</div>
+    <div class="line blue">Blue Line</div>
 </body>
 
 </html>
