@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colored Lines</title>
+    <title>ASCII Art with Colored Lines</title>
     <style>
         .line {
             height: 20px;
@@ -25,11 +25,42 @@
 </head>
 
 <body>
-    <div class="line red">Red Line</div>
-    <div class="line orange">Orange Line</div>
-    <div class="line yellow">Yellow Line</div>
-    <div class="line green">Green Line</div>
-    <div class="line blue">Blue Line</div>
+    <pre id="ascii-art">
+ _______  _______  _______  _______ 
+|       ||       ||       ||       |
+|   _   ||_     _||_     _||    ___|
+|  | |  |  |   |    |   |  |   |___ 
+|  |_|  |  |   |    |   |  |    ___|
+|       |  |   |    |   |  |   |___ 
+|_______|  |___|    |___|  |_______|
+    </pre>
+
+    <script>
+        // Multiline ASCII art string
+        const asciiArt = `
+ _______  _______  _______  _______ 
+|       ||       ||       ||       |
+|   _   ||_     _||_     _||    ___|
+|  | |  |  |   |    |   |  |   |___ 
+|  |_|  |  |   |    |   |  |    ___|
+|       |  |   |    |   |  |   |___ 
+|_______|  |___|    |___|  |_______|
+`;
+
+        // Split the ASCII art into lines
+        const asciiLines = asciiArt.trim().split('\n');
+
+        // Colors array
+        const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
+
+        // Loop through the lines and apply colors
+        asciiLines.forEach((line, index) => {
+            const div = document.createElement('div'); // Create a new div element
+            div.className = 'line ' + colors[index % colors.length]; // Apply colors in a loop
+            div.textContent = line; // Set text content to the line
+            document.body.appendChild(div); // Append the div element to the body
+        });
+    </script>
 </body>
 
 </html>
