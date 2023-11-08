@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACK-GBGay - queer hacking convention in Gothenburg</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00FF00;
+            font-family: monospace;
+            padding: 5px;
+        }
+
+        /* Define pastel colors for links */
+        a {
+            color: #ffff99; /* Pastel Yellow */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #d9b3ff; /* Pastel Purple */
+        }
+
+        .terminal {
+            border: 2px solid #00FF00;
+            padding: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #000;
+        }
+
+        .command-line {
+            color: #00FF00;
+        }
+
+        .main {
+            color: #00FF00;
+            margin-top: 20px;
+        }
+
+
+                .red { color: red; }
+                .orange { color: orange; }
+                .yellow { color: yellow; }
+                .green { color: green; }
+                .blue { color: blue; }
+
+        .variable {
+            color: #ADD8E6; /* Pastel blue for variable values */
+        }
+
+        .rainbow-text {
+        font-size: 48px;
+        background: linear-gradient(45deg, #FF0000, #FF8000, #FFFF00, #008000, #0000FF, #800080);
+        -webkit-background-clip: text;
+        color: transparent;
+        }
+
+        pre.acsii-logo { <- men kanske också ändra till "ascii-logo" 😉
+        font-size: 0.9vw;
+        }
+        pre {
+        text-wrap: wrap;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="terminal">
+    
+        <pre id="mobile">
+/*<font color="red"    >  _  __     __  _  __ _ \ /  __ _</font>
+<font color="yellow" >|_||_|/  |/  /__ |_)/__|_| Y  /  / \|V|</font>
+<font color="orange" >| || |\__|\o \_| |_)\_|| | |o \__\_/| |</font>
+<font color="green"  >*it looks better on pc ;)</font>   */</pre>
+        <pre id="nonmobile">
+// <font color="red"    >██   ██  █████   ██████ ██   ██       ██████  ██████   ██████  █████  ██    ██ </font>
+// <font color="orange" >██   ██ ██   ██ ██      ██  ██       ██       ██   ██ ██      ██   ██  ██  ██  </font>
+// <font color="yellow" >███████ ███████ ██      █████  █████ ██   ███ ██████  ██  ███ ███████   ████  </font>
+// <font color="green"  >██   ██ ██   ██ ██      ██  ██       ██    ██ ██   ██ ██   ██ ██   ██    ██  </font>
+// <font color="blue"   >██   ██ ██   ██  ██████ ██   ██       ██████  ██████   ██████ ██   ██    ██</font></pre>
+        <div class="main">
+        
+            <pre class="content">
+event = {
+    name        : "<span class="variable">[Queer-]HACK-GBGay</span>",
+
+    mission     : "<span class="variable">To introduce queers cyber security, as well as helping to connect queers in cyber security.</span>",
+
+    aduience    : "<span class="variable">Anyone who describes themselves as "queer" or "LGBTQIA+" are welcome!!</span>",
+    prior-knowedge-needed : "<span class="variable">false</span>",
+    
+    venue       : "<span class="variable">Regnbågshuset</span>",
+    city        : "<span class="variable">Gbgay / Gothenburg</span>",
+    country     : "<span class="variable">Sweden</span>",
+
+    date        : "<span class="variable">02-03-2024</span>", // dd-mm-yyyy
+    time-start  : "<span class="variable">12</span>", // 12 pm / noon
+    time-end    : "<span class="variable">21</span>", // 9 pm
+
+    fee         : <span class="variable">0</span>, // optional donations accepted
+    drop-in     : <span class="variable">true</span>, // with option pre-booking
+
+    vegan       : <span class="variable">true</span>,
+    alcohol     : <span class="variable">false</span>,
+    drugs       : <span class="variable">false</span>,
+
+    activities  : " // keep an eye open, as we will add more as we book em! 
+        <span class="variable">Stay curious!</span>, 
+            // A talk by Astrid, Vulnerability Research Engineer
+        <span class="variable">Look-picking station - try look-picking!</span>, 
+            // courtesy <a href ="https://www.assured.se/">Assured Security Consultants</a>
+        <span class="variable">"Staying anonymous online"</span>, 
+            // A talk by <a href="http://hell.rs">Rebekah Hellberg</a>
+        <span class="variable">Mini CTF competition</span>,
+        <span class="variable">Quiz-walk</span>,
+    ",
+
+    badges      : "
+        <span class="variable">Fun badges are going to be available for pre-bookings and a minimal fee.</span>
+    ",
+
+    call-to-action  : "
+        <span class="variable">We (\"the royal we\"/singular as of writing!) need all the help we can get. 
+        Please reach out if you want to;
+            volunteer,
+            donate,
+            sponsor,</span>
+    ",
+
+    organizer   : "<span class="variable"><a href="http://hell.rs">Rebekah Hellberg</a></span>",
+
+    contact     : "<span class="variable">Currently the best way to get in touch is to dm [ <a href="https://twitter.com/helldotrs">Rebekahs (X former) twitter</a> ].</span>",
+
+}
+            </pre>
+        </div><!--"main"-->
+    </div> <!--"terminal"-->
+
+
+    <script>
+        // JavaScript code to detect mobile devices
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        // Get the pre elements by their ids
+        var mobileElement = document.getElementById("mobile");
+        var nonMobileElement = document.getElementById("nonmobile");
+
+        // Check if the device is mobile, and display the appropriate logo
+        if (isMobile) {
+            mobileElement.style.display = "block";
+            nonMobileElement.style.display = "none";
+        } else {
+            mobileElement.style.display = "none";
+            nonMobileElement.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
