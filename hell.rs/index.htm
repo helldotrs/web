@@ -1,113 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rebekah Hellberg - hell.rs</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hell.rs - rebekah hellberg</title>
+<style>
+  body {
+    background-color: black;
+    color: green;
+    font-family: monospace;
+  }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  .container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
 
-    .ascii-art {
-      font-family: monospace;
-      margin-bottom: 20px;
-    }
+  .box {
+    margin-top: 100px; /* Adjust as needed */
+  }
 
-    .header {
-      font-size: 24px;
-      font-weight: bold;
-    }
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
-    .quote {
-      font-style: italic;
-      margin-top: 20px;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    .links {
-      margin-top: 20px;
-    }
-
-    .links a {
-      text-decoration: none;
-      margin: 0 10px;
-      color: blue;
-    }
-
-    .line-1 {
-      color: red;
-    }
-
-    .line-2 {
-      color: orange;
-    }
-
-    .line-3 {
-      color: yellow;
-    }
-
-    .line-4 {
-      color: green;
-    }
-
-    .line-5 {
-      color: blue;
-    }
-
-    .line-6 {
-      color: purple;
-    }
-
-    .line-7 {
-      color: pink;
-    }
-  </style>
+  .ascii-art pre {
+    white-space: pre-wrap; /* To ensure ASCII art maintains formatting */
+    word-wrap: break-word;
+  }
+</style>
 </head>
-
 <body>
-  <div class="container">
+
+<div class="container">
+  <div class="box">
     <div class="ascii-art">
       <pre id="ascii-art">
- ██░ ██ ▓█████  ██▓     ██▓          ██▀███    ██████ 
-▓██░ ██▒▓█   ▀ ▓██▒    ▓██▒         ▓██ ▒ ██▒▒██    ▒ 
-▒██▀▀██░▒███   ▒██░    ▒██░         ▓██ ░▄█ ▒░ ▓██▄   
-░▓█ ░██ ▒▓█  ▄ ▒██░    ▒██░         ▒██▀▀█▄    ▒   ██▒
-░▓█▒░██▓░▒████▒░██████▒░██████▒ ██▓ ░██▓ ▒██▒▒██████▒▒
- ▒ ░░▒░▒░░ ▒░ ░░ ▒░▓  ░░ ▒░▓  ░ ▒▓▒ ░ ▒▓ ░▒▓░▒ ▒▓▒ ▒ ░
- ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░ ░▒    ░▒ ░ ▒░░ ░▒  ░ ░
- ░  ░░ ░   ░     ░ ░     ░ ░    ░     ░░   ░ ░  ░  ░  
- ░  ░  ░   ░  ░    ░  ░    ░  ░  ░     ░           ░  
-                                 ░                    
+<span style="color: #FFA8A8;">▄     ▄  █  █          ▄</span>
+<span style="color: #FFCBA4;">░█░▄░█▄▀░█  █    █▀▄  ▀▄░</span>
+<span style="color: #B4F8C8;">░█▀█░▀▄░ █▄░█▄░▄░█▀▀▄░▄▄▀</span>
+<span style="color: #A0E7E5;"> ▒░▒ ░▒  ▒▒ ▒▒ ▒ ▒░░▒ ▒▒</span>
       </pre>
     </div>
-    <div class="header">Rebekah Hellberg</div>
-    <div class="quote">"Everyone should learn to program, it teaches you how to think" ~Steve Jobs, paraphrased</div>
     <div class="links">
-      <span>[</span><a href="http://gbgay.hell.rs">hack gbgay</a><span>]</span>
-      <!--<span>[</span><a href="https://www.linkedin.com/in/rebekah-hellberg-3b917a232/">linkedin</a><span>]</span>-->
+      <span>at </span>
+      <span>[</span><a href="http://hack.gbgay.com">hack.gbgay.com</a><span>]</span>
+      <span>[</span><a href="http://assured.se">assured</a><span>]</span>
+      <br><br>
+      <span>get in touch </span>
       <span>[</span><a href="https://twitter.com/helldotrs">twitter</a><span>]</span>
-      <span>[</span><a href="https://github.com/hellmak">github</a><span>]</span>
+      <span>[</span><a href="https://www.linkedin.com/in/helldotrs">linkedin</a><span>]</span>
+      <span>[</span><a href="https://defcon.social/@hell">mastodon</a><span>]</span>
+      <br><br>
+      <span>projects </span>
+      <span>[</span><a href="https://github.com/helldotrs/py-sphell-crypto">py-sphell-crypto</a><span>]</span>
     </div>
   </div>
-  <script>
-    const asciiArt = document.getElementById('ascii-art');
-    const lines = asciiArt.innerText.split('\n');
-    asciiArt.innerHTML = lines.map((line, index) => {
-      return `<div class="line-${index + 1}">${line}</div>`;
-    }).join('');
-  </script>
+</div>
 
 </body>
-
 </html>
